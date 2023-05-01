@@ -61,7 +61,7 @@ elif [[ "$brand" == "Chrysler" ]]; then
   reliability=8.0
 elif [[ "$brand" == "GMC" ]]; then
   reliability=8.5
-## A Brad is entered that isnt on file. ##
+## A Brand is entered that isnt on file. ##
 else
   reliability=6.0
 fi
