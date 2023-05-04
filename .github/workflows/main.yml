@@ -3,9 +3,9 @@ name: starter pipeline
 #This on clause specifies which event this pipeline will run
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
   pull_request:
-    branches: ["main"]
+    branches: ["master"]
     
   workflow_dispatch:
   
