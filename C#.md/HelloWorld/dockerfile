@@ -1,0 +1,15 @@
+FROM mcr.microsoft.com/dotnet/sdk:7.0
+#instruction sheet to build image
+
+
+#copy over source code
+WORKDIR /app
+COPY HelloWorld.csproj C#Hangmanproj.csproj
+COPY hangman.cs hangman.cs
+
+
+#build the application
+RUN dotnet publish -o dist
+
+#
+CMD ["dotnet","dist/C#Hangmanproj.dll"]
