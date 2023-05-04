@@ -13,6 +13,6 @@ jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-      -name: say hello
-      run: echo "Hey,worlddd"
-    
+      - name: say hello
+        run: echo "Hey,worlddd"
+     
