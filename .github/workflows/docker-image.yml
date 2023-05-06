@@ -1,5 +1,5 @@
 name: Docker Image CI
-
+### workflow will run on push
 on:
   push:
     branches: [ "master" ]
@@ -15,3 +15,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . -t croates23/hangmanfinal:0.0.3
+      
+      
+    - name: Push docker image to Docker hub
+      run: docker push croates23/hangmanfinal
