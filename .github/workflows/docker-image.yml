@@ -35,7 +35,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ${{ env.WORKING_DIR }}
-          file: ./Dockerfile
+          
           push: true
           tags: croates23/hangmanfinal:latest
       
