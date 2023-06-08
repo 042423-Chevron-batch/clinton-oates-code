@@ -21,8 +21,8 @@ namespace Rps_API.Controllers
             _logger = logger;
         }
 
-        // we will add another method
-        [HttpPost("Register")]// define what verb this action method requires
+        // method to register new user
+        [HttpPost("Register")]
         public ActionResult<Person> GetMyInt([FromBody] RegisterDto x)// get a json string object from the body and match it to the defined class.
         {
 
