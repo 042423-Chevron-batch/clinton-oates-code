@@ -1,0 +1,45 @@
+name: Docker Image CI
+### workflow will run on push
+on:
+  push:
+    branches: [ "master" ]
+    
+  pull_request:
+   branches: ["master"]
+  workflow_dispatch:
+
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    
+     # Log in to Docker Hub
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          
+      - name: Set Up QEMU
+        uses: docker/setup-qemu-action@v2
+        
+       - name: Set Up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+  
+    
+    # Build the Docker image from the Dockerfile in the repository
+      - name: Build/Push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: ${{ env.WORKING_DIR }}
+          file: ./Dockerfile
+          push: true
+          tags: croates23/hangmanfinal:latest
+      
+      
+     
