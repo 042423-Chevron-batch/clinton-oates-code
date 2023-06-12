@@ -10,7 +10,7 @@ namespace Rps_Repository
     public class Rps_RepoLayerClassLibrary
     {
 
-        private static SqlConnection clint { get; set; } = new SqlConnection("Server=tcp:022223-batch-server.database.windows.net,1433;Initial Catalog=022223-batch-db;Persist Security Info=False;User ID=batch-022223;Password=2peachtrees!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        private static SqlConnection clint { get; set; } = new SqlConnection("Server=tcp:clintsp2server.database.windows.net,1433;Initial Catalog=p2Database;Persist Security Info=False;User ID=croates23;Password={Audi4$ale};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
         /// <summary>
         /// Get a list of all the stores. This doesn not include the inventory.
